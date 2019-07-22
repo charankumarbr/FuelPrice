@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Fuel Price</string>
+    <string name="done">Done</string>
+    <string name="Rs">\u20B9</string>
+    <string name="change_state">Change State</string>
+    <string name="choose_state">Choose State</string>
+    <string name="error">Error</string>
+</resources>

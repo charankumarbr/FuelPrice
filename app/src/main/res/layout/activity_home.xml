@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     xmlns:tools="http://schemas.android.com/tools"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent"
+                                                     tools:context=".ui.home.HomeActivity"
+                                                     android:id="@+id/ahLayout">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+        <include layout="@layout/layout_toolbar"/>
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/ahTlBrands"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:tabTextAppearance="@style/tab_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabMinWidth="100dp"
+                app:tabBackground="@color/colorPrimary"
+                app:tabTextColor="@color/window_light"
+                app:tabRippleColor="@color/colorAccent"
+                app:tabSelectedTextColor="@android:color/white"
+                android:layoutDirection="locale"
+                android:textAlignment="viewStart"
+                android:textDirection="locale"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/ahVpBrands"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="locale"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

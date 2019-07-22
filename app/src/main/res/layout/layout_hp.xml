@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   app:cardUseCompatPadding="true"
+                                   app:cardBackgroundColor="@android:color/white">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+        <TextView
+                android:id="@+id/lhTvPlace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Place"
+                android:textSize="16sp" android:fontFamily="@font/open_sans_semibold"/>
+
+        <TextView
+                android:id="@+id/lhTvPetrolHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lhTvPlace"
+                android:text="Petrol:" android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:textSize="14sp" android:fontFamily="@font/open_sans"/>
+
+        <TextView
+                android:id="@+id/lhTvPetrol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/lhTvPlace"
+                app:layout_constraintStart_toEndOf="@id/lhTvPetrolHeader"
+                android:text="Petrol Price" android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:textSize="15sp" android:fontFamily="@font/open_sans"/>
+
+        <TextView
+                android:id="@+id/lhTvDieselHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lhTvPetrol"
+                android:text="Diesel:" android:layout_marginTop="10dp" android:layout_marginStart="16dp"
+                android:textSize="14sp" android:fontFamily="@font/open_sans"/>
+
+        <TextView
+                android:id="@+id/lhTvDiesel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/lhTvDieselHeader"
+                app:layout_constraintTop_toBottomOf="@id/lhTvPetrol"
+                android:text="Diesel Price" android:layout_marginTop="10dp" android:layout_marginStart="10dp"
+                android:textSize="15sp" android:fontFamily="@font/open_sans"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
