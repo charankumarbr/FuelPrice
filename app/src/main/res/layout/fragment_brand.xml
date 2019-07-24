@@ -7,7 +7,7 @@
         tools:context=".ui.home.BrandFragment">
 
     <TextView
-            android:id="@+id/bfTvBrand"
+            android:id="@+id/bfTvInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

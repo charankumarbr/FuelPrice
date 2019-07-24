@@ -30,7 +30,8 @@
                 app:tabSelectedTextColor="@android:color/white"
                 android:layoutDirection="locale"
                 android:textAlignment="viewStart"
-                android:textDirection="locale"/>
+                android:textDirection="locale"
+                app:tabIndicatorFullWidth="false"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 

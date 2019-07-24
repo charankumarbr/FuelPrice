@@ -5,4 +5,6 @@
     <string name="change_state">Change State</string>
     <string name="choose_state">Choose State</string>
     <string name="error">Error</string>
+    <string name="petrol_">Petrol:</string>
+    <string name="diesel_">Diesel:</string>
 </resources>

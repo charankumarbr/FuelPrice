@@ -100,24 +100,30 @@ class BrandFragment : Fragment() {
                 }
 
                 Response.STATUS_ERROR -> {
-                    bfPbLoading.gone()
-                    bfTvBrand.visible()
-                    val error = getString(R.string.error)
-                    bfTvBrand.text = Util.parseError(response.throwable)
+                    handleError(response.throwable)
                 }
 
                 Response.STATUS_LOADING -> {
                     bfPbLoading.visible()
+                    bfTvInfo.gone()
+                    bfRvData.gone()
                 }
             }
         })
+    }
+
+    private fun handleError(throwable: Throwable?) {
+        bfPbLoading.gone()
+        bfRvData.gone()
+        bfTvInfo.text = Util.parseError(throwable, context!!)
+        bfTvInfo.visible()
     }
 
     private fun setHPData(data: ArrayList<ResponseHP>) {
         bfRvData.layoutManager = linearLayoutManager
         hpAdapter.hpData = data
         bfRvData.adapter = hpAdapter
-        bfTvBrand.gone()
+        bfTvInfo.gone()
         bfPbLoading.gone()
         bfRvData.visible()
     }
@@ -130,13 +136,13 @@ class BrandFragment : Fragment() {
                 }
 
                 Response.STATUS_ERROR -> {
-                    bfPbLoading.gone()
-                    bfTvBrand.visible()
-                    bfTvBrand.text = Util.parseError(response.throwable)
+                    handleError(response.throwable)
                 }
 
                 Response.STATUS_LOADING -> {
                     bfPbLoading.visible()
+                    bfTvInfo.gone()
+                    bfRvData.gone()
                 }
             }
         })
@@ -147,7 +153,7 @@ class BrandFragment : Fragment() {
         bfRvData.layoutManager = linearLayoutManager
         iocAdapter.iocData = data
         bfRvData.adapter = iocAdapter
-        bfTvBrand.gone()
+        bfTvInfo.gone()
         bfPbLoading.gone()
         bfRvData.visible()
     }

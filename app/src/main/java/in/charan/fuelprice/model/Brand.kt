@@ -10,7 +10,7 @@ data class Brand(val name: String) {
 
         const val BRAND_BP = "BP"
         const val BRAND_HP = "HP"
-        const val BRAND_IOC = "IOC"
+        const val BRAND_IOC = "Indian Oil"
 
         @JvmStatic
         fun getAllBrands(): ArrayList<Brand> {

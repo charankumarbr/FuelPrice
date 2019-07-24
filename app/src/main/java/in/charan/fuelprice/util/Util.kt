@@ -31,10 +31,15 @@ class Util {
         }
 
         @JvmStatic
-        fun parseError(throwable: Throwable?): String {
+        fun parseError(throwable: Throwable?, context: Context): String {
             return throwable?.let {
                 if (throwable is IOException) {
-                    "Seems like you are offline. Please check your internet connection."
+                    if (isConnected(context)) {
+                        "Unable to reach our server. Please try again later."
+
+                    } else {
+                        "Seems like you are offline. Please check your internet connection."
+                    }
 
                 } else {
                     "Taking more time to communicate with our server. Please try again later."
