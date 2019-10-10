@@ -12,7 +12,8 @@ ext.version = [
         junit : "4.12",
         testRunner : "1.2.0",
         espresso : "3.2.0",
-        supportLibrary : "28.0.0"
+        supportLibrary : "28.0.0",
+        androidxLegacy : "1.0.0"
 ]
 
 def version = ext.version
@@ -21,33 +22,35 @@ ext.library = [
         kotlin_gradle : "org.jetbrains.kotlin:kotlin-gradle-plugin:$version.kotlin",
         kotlin_jdk8 : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$version.kotlin",
         appcompat :  "androidx.appcompat:appcompat:$version.appcompat",
+        androidx_legacy : "androidx.legacy:legacy-support-v4:$version.androidxLegacy",
         core_ktx : "androidx.core:core-ktx:$version.appcompat",
         constraintlayout : "androidx.constraintlayout:constraintlayout:$version.constraintlayout",
 
         dagger : "com.google.dagger:dagger:$version.dagger",
         dagger_compiler : "com.google.dagger:dagger-compiler:$version.dagger",
+        dagger_android : "com.google.dagger:dagger-android:$version.dagger",
+        dagger_android_support : "com.google.dagger:dagger-android-support:$version.dagger",
+        dagger_android_compiler : "com.google.dagger:dagger-android-processor:$version.dagger",
 
         rx_kotlin : "io.reactivex.rxjava2:rxkotlin:$version.rxKotlin",
-
         rx_android : "io.reactivex.rxjava2:rxandroid:$version.rxAndroid",
 
         retrofit : "com.squareup.retrofit2:retrofit:$version.retrofit",
-
         retrofit_rxjava_adapter : "com.squareup.retrofit2:adapter-rxjava2:$version.retrofit",
 
         gson : "com.squareup.retrofit2:converter-gson:$version.retrofit",
 
-        viewmodel : "androidx.lifecycle:lifecycle-extensions:$version.viewmodel",
+        lifecycle_extension : "androidx.lifecycle:lifecycle-extensions:$version.viewmodel",
+        lifecycle_ktx : "androidx.lifecycle:lifecycle-viewmodel-ktx:$version.viewmodel",
 
         okhttp : "com.squareup.okhttp3:logging-interceptor:$version.okHttp",
 
         recycler_view : "androidx.recyclerview:recyclerview:$version.recyclerView",
 
-        supportLibrary: "com.android.support:support-v4:$version.supportLibrary",
+        supportLibrary : "com.android.support:support-v4:$version.supportLibrary",
 
-        design: "com.android.support:design:$version.supportLibrary",
-
-        design_widget: "com.android.support:design:$version.supportLibrary",
+        design : "com.android.support:design:$version.supportLibrary",
+        design_widget : "com.android.support:design:$version.supportLibrary",
 
         junit : "junit:junit:$version.junit",
 

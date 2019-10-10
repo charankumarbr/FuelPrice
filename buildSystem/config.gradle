@@ -1,5 +1,5 @@
 ext.configuration = [
-        applicationId       : "in.charan.apixu_rx",
+        applicationId       : "in.charan.fuelprice",
         minSdkVersion       : 19,
         compileSdkVersion   : 29,
         targetSdkVersion    : 29,

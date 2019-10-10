@@ -12,7 +12,7 @@ def configuration = ext.configuration
 android {
     compileSdkVersion configuration.compileSdkVersion
     defaultConfig {
-        applicationId "in.charan.fuelprice"
+        applicationId configuration.applicationId
         minSdkVersion configuration.minSdkVersion
         targetSdkVersion configuration.targetSdkVersion
         versionCode configuration.versionCode
@@ -36,15 +36,20 @@ dependencies {
     implementation "${library.appcompat}"
     implementation "${library.core_ktx}"
     implementation "${library.constraintlayout}"
+    implementation "${library.androidx_legacy}"
 
     //-- dagger 2 --//
     implementation "${library.dagger}"
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
+    //implementation 'androidx.appcompat:appcompat:1.0.2'
+    //implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    //implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
     kapt "${library.dagger_compiler}"
+
+    //-- dagger 2 android --//
+    implementation "${library.dagger_android}"
+    implementation "${library.dagger_android_support}"
+    kapt "${library.dagger_android_compiler}"
 
     //-- RxKotlin --//
     implementation "${library.rx_kotlin}"
@@ -62,7 +67,8 @@ dependencies {
     implementation "${library.gson}"
 
     //-- viewmodel --//
-    implementation "${library.viewmodel}"
+    implementation "${library.lifecycle_extension}"
+    implementation "${library.lifecycle_ktx}"
 
     //-- okhttp3 --//
     implementation "${library.okhttp}"
